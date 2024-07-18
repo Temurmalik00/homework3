@@ -1,0 +1,955 @@
+
+@mixin display{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin second{
+    transition: all .3s ease;
+}
+@mixin cursor{
+    cursor: pointer;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+header{
+    background-image: url(../imgs/header_bg.png);
+    background-size: 100%;
+    background-color: #F1F0EB;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    .nav_top{
+        .container{
+            // padding: 15px 0px;   
+            @include display();
+            .nav_right{
+                @include display();
+                gap: 40px;
+                p{
+                    background-color: #000;
+                    padding: 17px 40px;
+                    letter-spacing: 2px;
+                }
+                .telegram{
+                    gap: 20px;
+                }
+            }
+            .selects{
+                gap: 20px;
+                display: flex;
+                select{
+                    background-color: transparent;
+                    color: white;
+                    border: none;
+                    option{
+                        background-color: black;
+                    }
+                }
+            }
+            .telegram{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                img{
+                    @include cursor();
+                }
+            }
+        }
+    }
+
+    .nav_bottom{
+        border-bottom: 2px solid white;
+        border-top: 2px solid white;
+        .container{
+            @include display();
+            padding: 5px 0px;
+            .bar{
+                display: none;
+            }
+            .call{
+                display: none;
+            }
+            .links{
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                li{
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        position: relative;
+                        color: white;
+                        padding: 3px 0px;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            width: 0%;
+                            background-color: #fff;
+                            height: 1px;
+                            bottom: 0;
+                            @include second();
+                            left: 0;
+                        }
+                        &:hover::after{
+                            width: 100%;
+                        }
+                        
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    
+    
+    .hero{
+        .container{
+            position: relative;
+            
+            div{
+                padding-top: 200px;
+                padding-bottom: 400px;
+                h1{
+                    font-size: 49px;
+                    font-weight: 400;
+                }
+                h2{
+                    font-weight: 400;
+                    font-size: 39px;
+                }
+                .go{
+                    position: absolute;
+                    bottom: 0px;
+                    padding: 10px 100px;
+                    @include cursor();
+                    border-radius: 50px 50px 0px 0px;
+                    background-color: #F1F0EB;
+                    color: black;
+                    transform: translateX(-50%);
+                    @include second();
+                    left: 50%;
+                    &:hover{
+                        background-color: #000;
+                        color: white;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+main{
+    background-color: #F1F0EB;
+    .sale_section{
+        .container{
+            padding: 60px 0px;
+            .block{
+                    display: flex;
+                    justify-content: space-between;
+                    overflow: hidden;
+                    gap: 20px;
+                .box{
+                        outline: hidden;
+                        position: relative;
+                    &:hover h2{
+                        left: 30px;
+                    }
+                    &:hover .btn_more{
+                        right: 20px;
+                    }
+                    .mobile_img{
+                        display: none;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                    h2{
+                        position: absolute;
+                        @include second();
+                        top: 30px;
+                        left: -300px;
+                        color: white;
+                        
+                    }
+                    
+                    .btn_more{
+                        position: absolute;
+                        padding: 13px 30px;
+                        @include second();
+                        transition-delay: .2s;
+                        background-color: transparent;
+                        border: 1px solid white;
+                        color: white;
+                        border-radius: 8px;
+                        bottom: 20px;
+                        right: -200px;
+                        @include cursor();
+                        
+                    }
+                
+
+                }
+                .cards{
+                    .box:nth-child(1){
+                        margin-bottom: 17px;
+                    }
+                    .box{
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    .brand_section{
+        .container{
+            h1{
+                text-align: center;
+                padding-bottom: 30px;
+            }
+            
+            .brand{
+                    display: flex;
+                    overflow: hidden;
+                div{
+                    width: 50%;
+                    border-radius: 10px;
+                    text-align: center;
+                    padding: 10px 0px;
+                }
+                .brand_blue{
+                    background-color: #4071CB;
+                    border-radius: 10px 0px  0px 10px;
+                    color: white;
+                }
+                .brand_gray{
+                    border: 1px solid gray;
+                    border-radius: 0px 10px  10px 0px;
+                }
+            }
+            .cards{
+                @include display();
+                flex-wrap: wrap;
+                padding: 50px 0px;
+                .card{
+                    text-align: center;
+                    color: #4071CB;
+                    @include second();
+                    @include cursor();
+                    img{
+                        width: 90%;
+                        margin-bottom: 5px;
+                    }
+                }
+                .card:hover{
+                    transform: scale(1.1);
+                }
+            }
+            
+            .btn_show{
+                padding: 10px 50px;
+                color: #4071CB;
+                @include cursor();
+                margin-left: 50%;
+                margin-bottom: 30px;
+                transform: translateX(-50%);
+                border-radius: 8px;
+                border: 1px solid #4071CB;
+                @include second();
+                &:hover{
+                    background-color: #4071CB;
+                    color: white;
+                
+                }
+            }
+        }
+    }
+
+    .deals_section{
+        .container{
+            .car_bg{
+                padding-bottom: 50px;
+                img{
+                    width: 100%;
+                }
+                .car_mobile{
+                    display: none;
+                }
+            }
+            .hot{
+                text-align: center;
+                padding-top: 30px;
+            }
+            .block{
+                @include display();
+                padding: 50px 0px;
+                flex-wrap: wrap;
+                .btn_show{
+                    display: none;
+                }
+                .box{
+                    width: 290px;
+                    height: 300px;
+                    overflow: hidden;
+                    position: relative;
+                    display: flex;
+                    margin-bottom: 20px;
+                    border: 2px solid #D9D9D9;
+                    border-radius: 10px;
+                    align-items: center;
+                    @include cursor();
+                    @include second();
+                    justify-content: center;
+                    &:hover{
+                        background-color: #fff;
+                    }
+                    &:hover h1{
+                        color: #F1F0EB;
+                    }
+                    .car{
+                        z-index: 99;
+                    }
+                    h1{
+                        position: absolute;
+                        @include second();
+                        width: 90%;
+                        font-size: 75px;
+                        color: white;
+                        top: 65px;
+                    }
+                    .lexus{
+                        font-size: 65px;
+                        letter-spacing: 5px;
+                    }
+                    .merc{
+                        font-size: 45px;
+                        top: 75px;
+                    }
+                    .mitsubishi{
+                        font-size: 40px;
+                        
+                        top: 75px;
+                    }
+                    h4{
+                        position: absolute;
+                        top: 15px;
+                        left: -200px;
+                    
+                        @include second();
+                    }
+                    &:hover h4{
+                        left: 10px;
+                    }
+                    li{
+                        position: absolute;
+                        color: #4071CB;
+                        right: -150px;
+                        @include second();
+                        top: 15px;
+                        a{
+                            text-decoration: none;
+                            color: #4071CB;
+                        }
+                    }
+                    &:hover li{
+                        right: 10px;
+                        transition-delay: .1s;
+                    }
+                    .motor{
+                        position: absolute;
+                        display: flex;
+                        gap: 15px;
+                        left: 10px;
+                        bottom: -100px;
+                        width: 100%;
+                        @include second();
+                        transition-delay: .2s ;
+                        div{
+                            display: flex;
+                            gap: 5px;
+                            align-items: center;
+                        }
+                    }
+                    &:hover .motor{
+                        bottom: 50px;
+                    }
+                    .car_btn{
+                        position: absolute;
+                        width: 95%;
+                        padding: 10px 0px;
+                        border-radius: 8px;
+                        border: 1px solid black;
+                        bottom: -100px;
+                        @include cursor();
+                        @include second();
+                        transition-delay: .4s;
+                        background-color: transparent;
+                    }
+                    &:hover .car_btn{
+                        bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .section_title{
+        .container{
+            .sng{
+                margin-left: 50%;
+                text-align: center;
+                transform: translateX(-50%);
+                padding: 70px 0px 30px 0px;
+                font-size: 30px;
+                width: 57%;
+            }
+            .block{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap:wrap ;
+                padding-bottom: 50px;
+                .box{
+                    padding: 10px 10px 40px 10px;
+                    border-radius: 8px;
+                    margin-top: 20px;
+                    border: 2px solid #4F4F4F;
+                    h1{
+                        padding-bottom: 30px;
+                    }
+                    p{
+                        font-size: 18px;
+                        padding-top: 10px;
+                    }
+                }
+                .box1{
+                    width: 290px;
+                }
+                .box2{
+                    width: 500px;
+                    p{
+                    width: 300px;
+                    }
+                }
+                .box3{
+                    width: 370px;
+                    p{
+                        width: 280px;
+                    }
+                }
+                .box4{
+                    width: 470px;
+                    p{
+                        width: 360px;
+                    }
+                }
+                .box5{
+                    width: 710px;
+                    div{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        p{
+                            width: 300px;
+                        }
+                        button{
+                            padding: 10px 50px;
+                            @include cursor();
+                            border-radius: 8px;
+                            border: 2px solid #4F4F4F;
+                            background-color: transparent;
+                            @include second();
+                            &:hover{
+                                background-color: #4071CB;
+                                color: white;
+                                border: 2px solid #4071CB;
+                            }
+                        }
+                    }
+                }
+            }
+            .audi{
+                position: relative;
+                display: flex;
+                padding-top: 50px;
+                @include cursor();
+                justify-content: center;
+
+                overflow: hidden;
+                .title_mobile{
+                    display: none;
+                }
+                img{
+                    width: 100%;
+                }
+                &:hover .audi_titles{
+                    bottom: 20px;
+                }
+               .audi_titles{
+                    display: flex;
+                    @include second();
+                    justify-content: space-evenly;
+                    width: 100%;
+                    position: absolute;
+                    bottom: -400px;
+                    .audi_title{
+                        img{
+                            display: none;
+                        }
+                        width: 270px;
+                        height: 320px;
+                        position: relative;
+                        padding: 20px 10px;
+                        border-radius: 10px;
+                        background-color: #FFFFFF99;
+                        p{
+                            font-size: 14px;
+                        }
+                        .avto{
+                            bottom: 20px;
+                            position: absolute;
+                            width: 85%;
+                        }
+                        .avto2{
+                            width: 80%;
+                            position: absolute;
+                            bottom: 100px;
+
+                        }
+                    
+                    }
+               }
+               
+            }
+        }
+    }
+}
+
+body{
+    background-color: #F1F0EB;
+    
+}
+
+.footer_top_line{
+    margin: 100px 0px 20px 0px;
+}
+
+footer{
+    .footer_top{
+        
+        .container{
+                padding: 20px 0px 50px 0px;
+                ul{
+                    display: flex;
+                    gap: 30px;
+                    // padding: 30px 0px;
+                    li{
+                        list-style: none;
+                        a{
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+                }
+                .footer_links{
+                    display: flex;
+                    gap: 175px;
+                    align-items: end;
+                    padding: 20px 0px;
+                    ul{
+                        li{
+                            a{
+                                padding: 3px 0px;
+                                position: relative;
+                                &::after{
+                                    content: "";
+                                    position: absolute;
+                                    width: 0%;
+                                    background-color: black;
+                                    height: 1px;
+                                    bottom: 0;
+                                    @include second();
+                                    left: 0;
+                                }
+                                &:hover::after{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            .logo_foot{
+                @include display();
+                .footer_logo{
+                    display: block;
+                    p{
+                        width: 60%;
+                        color: #4F4F4F;
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                        padding: 15px 0px
+                    }
+                }
+                .footer_right{
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 40px;
+                    align-items: end;
+                    margin-top: -50px;
+                    .telegram{
+                        display: flex;
+                        gap: 20px;
+                        span{
+                            @include cursor();
+                        }
+                    }
+                    div{
+                        h3{
+                            font-size: 30px;
+                            padding-top: 5px;
+                        }
+                    }
+                    p{
+                        background-color: #000;
+                        border-radius: 5px;
+                        padding: 17px 40px;
+                        letter-spacing: 2px;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer_bottom{
+        .container{
+            .block{
+                    gap: 10px;
+                    padding: 50px 0px;
+                    display: flex;
+                    .box3{
+                        margin-right: 50px;
+                    }
+                .box{
+                    width: 170px;
+                    padding: 10px 10px 50px 10px;
+                    background-color: transparent;
+                    border: 1px solid #D9D9D9;
+                    border-radius: 10px;
+                    position: relative;
+                    .info{
+                        position: absolute;
+                        right: 10px;
+                    }
+                    h4{
+                        position: absolute;
+                        right: 10px;
+                        bottom: 10px;
+                        color: #4F4F4F;
+                    }
+                    hr{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 447px){
+    .container{
+        padding: 10px !important;
+    }
+    header{
+        background-image: url(../imgs/header_mobile.png);
+        .nav_top{
+            display: none;
+        }
+        .nav_bottom{
+            border-bottom: 2px solid #989898;
+            border-top: none;
+            .container{
+                padding: 0px !important;
+                .links{
+
+                    display: none;
+                }
+                .none{
+                    display: none;
+                }
+                .logo{
+                    padding: 0px 15px;
+                        text-align: center;
+                    img{
+                    width: 70%;
+                    }
+                }
+                .bar{
+                display: block;
+                padding: 20px;
+                border-right: 2px solid #989898;
+                }
+                .call{
+                    padding: 20px;
+                    border-left: 2px solid #989898;
+                    display: block;
+                }
+            }
+        }
+        .hero{
+            .container{
+                div{
+                    width: 370px;
+                    padding: 180px 0px;
+                    h2{
+                        font-size: 26px;
+                    }
+                    h1{
+                        font-size: 65px;
+                    }
+                    .go{
+                        padding: 10px 50px;
+                    }
+                }
+            }
+        }
+    }
+    main{
+        .sale_section{
+            .container{
+                .block{
+                    padding: 50px 5px;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    .box{
+                        .deskop_img{
+                            display: none;
+                        }
+                        .mobile_img{
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .deals_section{
+            .container{
+                
+                .block{
+                    justify-content: center;
+                    .box{
+                        width: 90%;
+                        
+                        h1{
+                            left: 50%;
+                            width: 95%;
+                            text-align: center;
+                            transform: translateX(-50%);
+                        }
+                        .merc{
+                            width: 90%;
+                            font-size: 40px;
+                        }
+                    }
+                    .btn_show{
+                        padding: 15px 0px;
+                        border-radius: 10px;
+                        border: 1px solid #4071CB;
+                        background-color: transparent;
+                        color: #4071CB;
+                        width: 95%;
+                        @include second();
+                        @include cursor();
+                        display: block; 
+                        &:hover{
+                            background-color: #4071CB;
+                            color: white;
+                        }
+                    }
+                }
+                .car_bg{
+                    .car_deskop{
+                        display: none;
+                    }
+                    .car_mobile{
+                        display: block;
+                        width: 100%;
+                        
+                    }
+                    
+                }
+            }
+        }
+        .brand_section{
+            .container{
+                .cards{
+                    .card{
+                        width: 32%;
+                        margin-top: 10px;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .section_title{
+            .container{
+                .sng{
+                    font-size: 20px;
+                    text-align: center;
+                    width: 100%;
+                }
+                .block{
+                    .box{
+                        width: 100%;
+                        
+                    }
+                    .box4{
+                        p{
+                            width: 80%;
+                        }
+                    }
+                    .box5{
+                        padding: 10px 10px 20px 10px;
+                        div{
+                            display: block;
+                            padding: 10px 0px;
+                            p{
+                                padding-bottom: 20px;
+                            }
+                            button{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                .audi{
+                    .title_deskop{
+                        display: none;
+                    }
+                    .title_mobile{
+                        display: block;
+                    }
+                    &:hover .audi_titles{
+                        bottom: 20px;
+                    }
+
+                    .audi_titles{
+                        display: block;
+                        left: 50%;
+                        bottom: -500px;
+                        #audi_3{
+                            transition-delay: 1s;
+                        }
+                        .audi_title{
+                            height: 100px;
+                            width: 90%;
+                            transform: translateX(-50%);
+                            margin-top: 20px;
+                            img{
+                                display: block;
+                                width: 10%;
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                right: 20px;
+                            }
+                            h2{
+                                width: 50%;
+                            }
+                            div{
+                                display: none;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer{
+        .footer_top{
+            .container{
+                .logo_foot{
+                    flex-wrap: wrap;
+                    .footer_right{
+                        margin: 0px !important;
+                        flex-wrap: wrap;
+                        p{
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+                    .footer_logo{
+                        padding: 30px 0px;
+                    }
+                }
+                .footer_links{
+                    ul{
+                        display: none;
+                        
+                    }
+                    div{
+                        width: 75%;
+                    }
+                }
+            }
+        }
+        .footer_bottom{
+            .container{
+                .block{
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    .box{
+                        width: 31%;
+                        padding: 10px 10px 30px 10px;
+                        margin: 0px !important;
+                        hr{
+                            display: block;
+                        }
+                    }
+                    .box4, .box5{
+                        width: 48%;
+                        padding: 20px 20px;
+                        .info{
+                            display: none;
+                        }
+                        
+                        h4{
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,820 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-image: url(../imgs/header_bg.png);
+  background-size: 100%;
+  background-color: #F1F0EB;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+header .nav_top .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .nav_top .container .nav_right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+header .nav_top .container .nav_right p {
+  background-color: #000;
+  padding: 17px 40px;
+  letter-spacing: 2px;
+}
+header .nav_top .container .nav_right .telegram {
+  gap: 20px;
+}
+header .nav_top .container .selects {
+  gap: 20px;
+  display: flex;
+}
+header .nav_top .container .selects select {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+header .nav_top .container .selects select option {
+  background-color: black;
+}
+header .nav_top .container .telegram {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .nav_top .container .telegram img {
+  cursor: pointer;
+}
+header .nav_bottom {
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+}
+header .nav_bottom .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0px;
+}
+header .nav_bottom .container .bar {
+  display: none;
+}
+header .nav_bottom .container .call {
+  display: none;
+}
+header .nav_bottom .container .links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+header .nav_bottom .container .links li {
+  list-style: none;
+}
+header .nav_bottom .container .links li a {
+  text-decoration: none;
+  position: relative;
+  color: white;
+  padding: 3px 0px;
+}
+header .nav_bottom .container .links li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  background-color: #fff;
+  height: 1px;
+  bottom: 0;
+  transition: all 0.3s ease;
+  left: 0;
+}
+header .nav_bottom .container .links li a:hover::after {
+  width: 100%;
+}
+header .hero .container {
+  position: relative;
+}
+header .hero .container div {
+  padding-top: 200px;
+  padding-bottom: 400px;
+}
+header .hero .container div h1 {
+  font-size: 49px;
+  font-weight: 400;
+}
+header .hero .container div h2 {
+  font-weight: 400;
+  font-size: 39px;
+}
+header .hero .container div .go {
+  position: absolute;
+  bottom: 0px;
+  padding: 10px 100px;
+  cursor: pointer;
+  border-radius: 50px 50px 0px 0px;
+  background-color: #F1F0EB;
+  color: black;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+  left: 50%;
+}
+header .hero .container div .go:hover {
+  background-color: #000;
+  color: white;
+}
+
+main {
+  background-color: #F1F0EB;
+}
+main .sale_section .container {
+  padding: 60px 0px;
+}
+main .sale_section .container .block {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  gap: 20px;
+}
+main .sale_section .container .block .box {
+  outline: hidden;
+  position: relative;
+}
+main .sale_section .container .block .box:hover h2 {
+  left: 30px;
+}
+main .sale_section .container .block .box:hover .btn_more {
+  right: 20px;
+}
+main .sale_section .container .block .box .mobile_img {
+  display: none;
+}
+main .sale_section .container .block .box img {
+  width: 100%;
+}
+main .sale_section .container .block .box h2 {
+  position: absolute;
+  transition: all 0.3s ease;
+  top: 30px;
+  left: -300px;
+  color: white;
+}
+main .sale_section .container .block .box .btn_more {
+  position: absolute;
+  padding: 13px 30px;
+  transition: all 0.3s ease;
+  transition-delay: 0.2s;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 8px;
+  bottom: 20px;
+  right: -200px;
+  cursor: pointer;
+}
+main .sale_section .container .block .cards .box:nth-child(1) {
+  margin-bottom: 17px;
+}
+main .sale_section .container .block .cards .box {
+  overflow: hidden;
+}
+main .brand_section .container h1 {
+  text-align: center;
+  padding-bottom: 30px;
+}
+main .brand_section .container .brand {
+  display: flex;
+  overflow: hidden;
+}
+main .brand_section .container .brand div {
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 0px;
+}
+main .brand_section .container .brand .brand_blue {
+  background-color: #4071CB;
+  border-radius: 10px 0px 0px 10px;
+  color: white;
+}
+main .brand_section .container .brand .brand_gray {
+  border: 1px solid gray;
+  border-radius: 0px 10px 10px 0px;
+}
+main .brand_section .container .cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px 0px;
+}
+main .brand_section .container .cards .card {
+  text-align: center;
+  color: #4071CB;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+main .brand_section .container .cards .card img {
+  width: 90%;
+  margin-bottom: 5px;
+}
+main .brand_section .container .cards .card:hover {
+  transform: scale(1.1);
+}
+main .brand_section .container .btn_show {
+  padding: 10px 50px;
+  color: #4071CB;
+  cursor: pointer;
+  margin-left: 50%;
+  margin-bottom: 30px;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  border: 1px solid #4071CB;
+  transition: all 0.3s ease;
+}
+main .brand_section .container .btn_show:hover {
+  background-color: #4071CB;
+  color: white;
+}
+main .deals_section .container .car_bg {
+  padding-bottom: 50px;
+}
+main .deals_section .container .car_bg img {
+  width: 100%;
+}
+main .deals_section .container .car_bg .car_mobile {
+  display: none;
+}
+main .deals_section .container .hot {
+  text-align: center;
+  padding-top: 30px;
+}
+main .deals_section .container .block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0px;
+  flex-wrap: wrap;
+}
+main .deals_section .container .block .btn_show {
+  display: none;
+}
+main .deals_section .container .block .box {
+  width: 290px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  margin-bottom: 20px;
+  border: 2px solid #D9D9D9;
+  border-radius: 10px;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  justify-content: center;
+}
+main .deals_section .container .block .box:hover {
+  background-color: #fff;
+}
+main .deals_section .container .block .box:hover h1 {
+  color: #F1F0EB;
+}
+main .deals_section .container .block .box .car {
+  z-index: 99;
+}
+main .deals_section .container .block .box h1 {
+  position: absolute;
+  transition: all 0.3s ease;
+  width: 90%;
+  font-size: 75px;
+  color: white;
+  top: 65px;
+}
+main .deals_section .container .block .box .lexus {
+  font-size: 65px;
+  letter-spacing: 5px;
+}
+main .deals_section .container .block .box .merc {
+  font-size: 45px;
+  top: 75px;
+}
+main .deals_section .container .block .box .mitsubishi {
+  font-size: 40px;
+  top: 75px;
+}
+main .deals_section .container .block .box h4 {
+  position: absolute;
+  top: 15px;
+  left: -200px;
+  transition: all 0.3s ease;
+}
+main .deals_section .container .block .box:hover h4 {
+  left: 10px;
+}
+main .deals_section .container .block .box li {
+  position: absolute;
+  color: #4071CB;
+  right: -150px;
+  transition: all 0.3s ease;
+  top: 15px;
+}
+main .deals_section .container .block .box li a {
+  text-decoration: none;
+  color: #4071CB;
+}
+main .deals_section .container .block .box:hover li {
+  right: 10px;
+  transition-delay: 0.1s;
+}
+main .deals_section .container .block .box .motor {
+  position: absolute;
+  display: flex;
+  gap: 15px;
+  left: 10px;
+  bottom: -100px;
+  width: 100%;
+  transition: all 0.3s ease;
+  transition-delay: 0.2s;
+}
+main .deals_section .container .block .box .motor div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+main .deals_section .container .block .box:hover .motor {
+  bottom: 50px;
+}
+main .deals_section .container .block .box .car_btn {
+  position: absolute;
+  width: 95%;
+  padding: 10px 0px;
+  border-radius: 8px;
+  border: 1px solid black;
+  bottom: -100px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transition-delay: 0.4s;
+  background-color: transparent;
+}
+main .deals_section .container .block .box:hover .car_btn {
+  bottom: 10px;
+}
+main .section_title .container .sng {
+  margin-left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  padding: 70px 0px 30px 0px;
+  font-size: 30px;
+  width: 57%;
+}
+main .section_title .container .block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+main .section_title .container .block .box {
+  padding: 10px 10px 40px 10px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 2px solid #4F4F4F;
+}
+main .section_title .container .block .box h1 {
+  padding-bottom: 30px;
+}
+main .section_title .container .block .box p {
+  font-size: 18px;
+  padding-top: 10px;
+}
+main .section_title .container .block .box1 {
+  width: 290px;
+}
+main .section_title .container .block .box2 {
+  width: 500px;
+}
+main .section_title .container .block .box2 p {
+  width: 300px;
+}
+main .section_title .container .block .box3 {
+  width: 370px;
+}
+main .section_title .container .block .box3 p {
+  width: 280px;
+}
+main .section_title .container .block .box4 {
+  width: 470px;
+}
+main .section_title .container .block .box4 p {
+  width: 360px;
+}
+main .section_title .container .block .box5 {
+  width: 710px;
+}
+main .section_title .container .block .box5 div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .section_title .container .block .box5 div p {
+  width: 300px;
+}
+main .section_title .container .block .box5 div button {
+  padding: 10px 50px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #4F4F4F;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+main .section_title .container .block .box5 div button:hover {
+  background-color: #4071CB;
+  color: white;
+  border: 2px solid #4071CB;
+}
+main .section_title .container .audi {
+  position: relative;
+  display: flex;
+  padding-top: 50px;
+  cursor: pointer;
+  justify-content: center;
+  overflow: hidden;
+}
+main .section_title .container .audi .title_mobile {
+  display: none;
+}
+main .section_title .container .audi img {
+  width: 100%;
+}
+main .section_title .container .audi:hover .audi_titles {
+  bottom: 20px;
+}
+main .section_title .container .audi .audi_titles {
+  display: flex;
+  transition: all 0.3s ease;
+  justify-content: space-evenly;
+  width: 100%;
+  position: absolute;
+  bottom: -400px;
+}
+main .section_title .container .audi .audi_titles .audi_title {
+  width: 270px;
+  height: 320px;
+  position: relative;
+  padding: 20px 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+main .section_title .container .audi .audi_titles .audi_title img {
+  display: none;
+}
+main .section_title .container .audi .audi_titles .audi_title p {
+  font-size: 14px;
+}
+main .section_title .container .audi .audi_titles .audi_title .avto {
+  bottom: 20px;
+  position: absolute;
+  width: 85%;
+}
+main .section_title .container .audi .audi_titles .audi_title .avto2 {
+  width: 80%;
+  position: absolute;
+  bottom: 100px;
+}
+
+body {
+  background-color: #F1F0EB;
+}
+
+.footer_top_line {
+  margin: 100px 0px 20px 0px;
+}
+
+footer .footer_top .container {
+  padding: 20px 0px 50px 0px;
+}
+footer .footer_top .container ul {
+  display: flex;
+  gap: 30px;
+}
+footer .footer_top .container ul li {
+  list-style: none;
+}
+footer .footer_top .container ul li a {
+  text-decoration: none;
+  color: black;
+}
+footer .footer_top .container .footer_links {
+  display: flex;
+  gap: 175px;
+  align-items: end;
+  padding: 20px 0px;
+}
+footer .footer_top .container .footer_links ul li a {
+  padding: 3px 0px;
+  position: relative;
+}
+footer .footer_top .container .footer_links ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  background-color: black;
+  height: 1px;
+  bottom: 0;
+  transition: all 0.3s ease;
+  left: 0;
+}
+footer .footer_top .container .footer_links ul li a:hover::after {
+  width: 100%;
+}
+footer .footer_top .container .logo_foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer_top .container .logo_foot .footer_logo {
+  display: block;
+}
+footer .footer_top .container .logo_foot .footer_logo p {
+  width: 60%;
+  color: #4F4F4F;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 15px 0px;
+}
+footer .footer_top .container .logo_foot .footer_right {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: end;
+  margin-top: -50px;
+}
+footer .footer_top .container .logo_foot .footer_right .telegram {
+  display: flex;
+  gap: 20px;
+}
+footer .footer_top .container .logo_foot .footer_right .telegram span {
+  cursor: pointer;
+}
+footer .footer_top .container .logo_foot .footer_right div h3 {
+  font-size: 30px;
+  padding-top: 5px;
+}
+footer .footer_top .container .logo_foot .footer_right p {
+  background-color: #000;
+  border-radius: 5px;
+  padding: 17px 40px;
+  letter-spacing: 2px;
+  color: white;
+}
+footer .footer_bottom .container .block {
+  gap: 10px;
+  padding: 50px 0px;
+  display: flex;
+}
+footer .footer_bottom .container .block .box3 {
+  margin-right: 50px;
+}
+footer .footer_bottom .container .block .box {
+  width: 170px;
+  padding: 10px 10px 50px 10px;
+  background-color: transparent;
+  border: 1px solid #D9D9D9;
+  border-radius: 10px;
+  position: relative;
+}
+footer .footer_bottom .container .block .box .info {
+  position: absolute;
+  right: 10px;
+}
+footer .footer_bottom .container .block .box h4 {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: #4F4F4F;
+}
+footer .footer_bottom .container .block .box hr {
+  display: none;
+}
+
+@media (max-width: 447px) {
+  .container {
+    padding: 10px !important;
+  }
+  header {
+    background-image: url(../imgs/header_mobile.png);
+  }
+  header .nav_top {
+    display: none;
+  }
+  header .nav_bottom {
+    border-bottom: 2px solid #989898;
+    border-top: none;
+  }
+  header .nav_bottom .container {
+    padding: 0px !important;
+  }
+  header .nav_bottom .container .links {
+    display: none;
+  }
+  header .nav_bottom .container .none {
+    display: none;
+  }
+  header .nav_bottom .container .logo {
+    padding: 0px 15px;
+    text-align: center;
+  }
+  header .nav_bottom .container .logo img {
+    width: 70%;
+  }
+  header .nav_bottom .container .bar {
+    display: block;
+    padding: 20px;
+    border-right: 2px solid #989898;
+  }
+  header .nav_bottom .container .call {
+    padding: 20px;
+    border-left: 2px solid #989898;
+    display: block;
+  }
+  header .hero .container div {
+    width: 370px;
+    padding: 180px 0px;
+  }
+  header .hero .container div h2 {
+    font-size: 26px;
+  }
+  header .hero .container div h1 {
+    font-size: 65px;
+  }
+  header .hero .container div .go {
+    padding: 10px 50px;
+  }
+  main .sale_section .container .block {
+    padding: 50px 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  main .sale_section .container .block .box .deskop_img {
+    display: none;
+  }
+  main .sale_section .container .block .box .mobile_img {
+    display: block;
+    width: 100%;
+  }
+  main .deals_section .container .block {
+    justify-content: center;
+  }
+  main .deals_section .container .block .box {
+    width: 90%;
+  }
+  main .deals_section .container .block .box h1 {
+    left: 50%;
+    width: 95%;
+    text-align: center;
+    transform: translateX(-50%);
+  }
+  main .deals_section .container .block .box .merc {
+    width: 90%;
+    font-size: 40px;
+  }
+  main .deals_section .container .block .btn_show {
+    padding: 15px 0px;
+    border-radius: 10px;
+    border: 1px solid #4071CB;
+    background-color: transparent;
+    color: #4071CB;
+    width: 95%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: block;
+  }
+  main .deals_section .container .block .btn_show:hover {
+    background-color: #4071CB;
+    color: white;
+  }
+  main .deals_section .container .car_bg .car_deskop {
+    display: none;
+  }
+  main .deals_section .container .car_bg .car_mobile {
+    display: block;
+    width: 100%;
+  }
+  main .brand_section .container .cards .card {
+    width: 32%;
+    margin-top: 10px;
+  }
+  main .brand_section .container .cards .card img {
+    width: 100%;
+  }
+  main .section_title .container .sng {
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  main .section_title .container .block .box {
+    width: 100%;
+  }
+  main .section_title .container .block .box4 p {
+    width: 80%;
+  }
+  main .section_title .container .block .box5 {
+    padding: 10px 10px 20px 10px;
+  }
+  main .section_title .container .block .box5 div {
+    display: block;
+    padding: 10px 0px;
+  }
+  main .section_title .container .block .box5 div p {
+    padding-bottom: 20px;
+  }
+  main .section_title .container .block .box5 div button {
+    width: 100%;
+  }
+  main .section_title .container .audi .title_deskop {
+    display: none;
+  }
+  main .section_title .container .audi .title_mobile {
+    display: block;
+  }
+  main .section_title .container .audi:hover .audi_titles {
+    bottom: 20px;
+  }
+  main .section_title .container .audi .audi_titles {
+    display: block;
+    left: 50%;
+    bottom: -500px;
+  }
+  main .section_title .container .audi .audi_titles #audi_3 {
+    transition-delay: 1s;
+  }
+  main .section_title .container .audi .audi_titles .audi_title {
+    height: 100px;
+    width: 90%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+  }
+  main .section_title .container .audi .audi_titles .audi_title img {
+    display: block;
+    width: 10%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+  }
+  main .section_title .container .audi .audi_titles .audi_title h2 {
+    width: 50%;
+  }
+  main .section_title .container .audi .audi_titles .audi_title div {
+    display: none;
+  }
+  footer .footer_top .container .logo_foot {
+    flex-wrap: wrap;
+  }
+  footer .footer_top .container .logo_foot .footer_right {
+    margin: 0px !important;
+    flex-wrap: wrap;
+  }
+  footer .footer_top .container .logo_foot .footer_right p {
+    width: 100%;
+    text-align: center;
+  }
+  footer .footer_top .container .logo_foot .footer_logo {
+    padding: 30px 0px;
+  }
+  footer .footer_top .container .footer_links ul {
+    display: none;
+  }
+  footer .footer_top .container .footer_links div {
+    width: 75%;
+  }
+  footer .footer_bottom .container .block {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer .footer_bottom .container .block .box {
+    width: 31%;
+    padding: 10px 10px 30px 10px;
+    margin: 0px !important;
+  }
+  footer .footer_bottom .container .block .box hr {
+    display: block;
+  }
+  footer .footer_bottom .container .block .box4, footer .footer_bottom .container .block .box5 {
+    width: 48%;
+    padding: 20px 20px;
+  }
+  footer .footer_bottom .container .block .box4 .info, footer .footer_bottom .container .block .box5 .info {
+    display: none;
+  }
+  footer .footer_bottom .container .block .box4 h4, footer .footer_bottom .container .block .box5 h4 {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}/*# sourceMappingURL=main.css.map */
